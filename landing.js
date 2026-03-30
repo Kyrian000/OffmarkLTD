@@ -189,5 +189,15 @@ window.addEventListener('scroll', () =>{
         });
 
 
+// Animate elements on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate');
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
         

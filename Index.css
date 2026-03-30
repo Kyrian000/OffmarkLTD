@@ -65,6 +65,35 @@ h6{
     font-size: 0.8rem;
 }
 
+
+/* animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes animateFloatingNav {
+    to{
+        bottom: 2.5rem;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+    }
+}
+
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
  /* ── Custom cursor wrapper ── */
   #cursor {
     position: fixed;
@@ -166,31 +195,6 @@ h6{
       gap: 10px;
     }
  
-    /* .nav-pill {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.8rem 2.2rem;
-      border-radius: 999px;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 1000;
-      font-size: 0.75rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      cursor: pointer;
-      text-decoration: none;
-      color: var(--color-gray-9);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    } */
-    /* 
-    .pill-filled {
-      background: var(--color-gray-1);
-      border: 2.5px solid var(--color-primary);
-    }
-    .pill-outline {
-      background: var(--color-gray-1);
-      border: 2.5px solid var(--pill-border);
-    } */
  
 
     /* Center logo */
@@ -260,46 +264,6 @@ h6{
 }
 
 /* floating nav */
-/* .floating-nav{
-    position: fixed;
-    left: 50%;
-    bottom: -8rem;
-    transform: translateX(-50%) scale(0);
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    width: fit-content;
-    height: 4.4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.4rem;
-    padding: 0.7rem;
-    border-radius: 2.2rem;
-    z-index: 10;
-    opacity: 0;
-    
-    animation: animateFloatingNav 1s 2s ease forwards;
-    a{
-        color: var(--color-gray-9);
-        width: 3.2rem;
-        aspect-ratio: 1/1;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-        font-size: 1rem;
-        &.active{
-            background: var(--color-primary);
-            color: var(--color-gray-0);
-            &:hover{
-                color: white;
-            }
-        }
-        &:hover{
-            color: var(--color-primary);
-        }
-    }
-} */
 .nav-scene{
     display: none;
 }
@@ -313,26 +277,28 @@ h6{
       padding: 40px 24px 100px;
       text-align: center;
       overflow: hidden;
-      p{
-        font-size: 1.5rem;
-        color: var(--color-gray-0);
-        margin-top: -1rem;
-        margin-bottom: 2rem;
-        font-family: "Dancing Script", cursive;
-        font-optical-sizing: auto;
-        transform: rotate(-8deg);
-      }
-      h1{
-        font-size: 3.5rem;
-        color: var(--color-gray-0);
-        margin-bottom: 16px;
-        font-family: "Monoton", sans-serif;
-        font-weight: 500;
-        font-optical-sizing: auto;
-      }
-      a{
-        margin-top: 1.5rem;
-      }
+          p{
+            font-size: 1.5rem;
+            color: var(--color-gray-0);
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
+            transform: rotate(-8deg);
+          }
+          h1{
+            font-size: 3.5rem;
+            color: var(--color-gray-0);
+            margin-bottom: 16px;
+            font-family: "Monoton", sans-serif;
+            font-weight: 500;
+            font-optical-sizing: auto;
+            animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+          }
+          a{
+            margin-top: 1.5rem;
+          }
+      
 }
 
 
@@ -578,13 +544,7 @@ p{
     pointer-events: none;
   }
 
-@keyframes animateFloatingNav {
-    to{
-        bottom: 2.5rem;
-        opacity: 1;
-        transform: translateX(-50%) scale(1);
-    }
-}
+
 
 nav.desktop-nav {
   .button-74{
