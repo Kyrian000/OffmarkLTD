@@ -20,9 +20,21 @@
     <!-- Swiper CSS -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-</head>
-<body>
+     <!-- favicon -->
+      <link rel="icon" type="image/svg+xml" href="Images/White/logo.png">
+      <!-- Apple devices -->
+      <link rel="apple-touch-icon" href="Images/White/Logo2.png">
 
+   <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Font Awesome -->
+
+    </head>
+<body>
+<!-- loader -->
+ <div class="loader-wrapper">
+    <img src="Images/White/logo.png" alt="Offmark">
+ </div>
 
   <!-- ── CURSOR SVG ── -->
 <div id="cursor">
@@ -130,11 +142,29 @@
                 </div>
             </div>
 </div>
+
+<h1>Limited drops. Creator-driven designs.</h1>
+<h1>A brand owned by the people wearing it.</h1>
+<div class="button-container"> 
+  <a href="#" class="button-74" role="button"><i class="fa-brands fa-android"></i>      Google Play</a>
+  <a href="#" class="button-74" role="button"><i class="fa-brands fa-apple"></i>      App Store</a>
+</div>
+<p>coming soon</p>
 </div> 
 
 
 <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(window).on("load", function(){
+      setTimeout(() => {
+        $(".loader-wrapper").addClass("swipe-away");
+      }, 1700); 
+    });
+    </script>
+
+
   <script src="landing.js"></script>
   <script src="cursor.js"></script>
 </body>

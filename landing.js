@@ -178,7 +178,7 @@ window.addEventListener('scroll', () =>{
               // Autoplay
             autoplay: {
                 delay: 2500,
-                disableOnInteraction: false,
+                disableOnInteraction: true,
                 pauseOnMouseEnter: true,
             },
             
@@ -187,3 +187,7 @@ window.addEventListener('scroll', () =>{
             speed: 1000,
 
         });
+
+
+
+        
