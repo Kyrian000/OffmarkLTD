@@ -9,7 +9,6 @@
     <!-- <link rel="stylesheet" href="animated_bg.css"> -->
 
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
     <!-- font family -->
      <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,8 +28,7 @@
       <link rel="apple-touch-icon" href="Images/White/Logo2.png">
 
    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/solid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
    <!-- Font Awesome -->
 
 
@@ -71,8 +69,8 @@
  <!-- DESKTOP NAV -->
   <nav class="desktop-nav">
     <div class="nav-side">
-      <a href="#" class=" nav-pill button-74" role="button">FAQs</a>
-      <a href="#" class=" nav-pill button-74 " role="button">About</a>
+      <a href="index.html" class=" nav-pill button-74" role="button">FAQs</a>
+      <a href="team.html" class=" nav-pill button-74 " role="button">About</a>
     </div>
  
     <a href="#" class="nav-logo"><img src="Images/White/Logo2.png" alt=""></a>
@@ -94,14 +92,22 @@
  
   <!-- Menu Bar -->
   <menu class="floating-nav">
-    <a href="#" class="active">
+    <a href="#" data-section="hero" data-nav-id="home">
       <i class="fa fa-home"></i>
       <span class="active-dot"></span>
     </a>
-    <a href="#resume"><i class="fa-solid fa-users"></i></a>
-    <a href="#projects"><i class="fa fa-shirt"></i></a>
-    <a href="#faqs"><i class="fa fa-question"></i></a>
-    <a href="#contact"><i class="fa fa-envelope"></i></a>
+    <a href="team.html" data-section="team" data-nav-id="team">
+      <i class="fa fa-users"></i>
+    </a>
+    <a href="#projects" data-section="projects" data-nav-id="projects">
+      <i class="fa fa-shirt"></i>
+    </a>
+    <a href="#faqs" data-section="faqs" data-nav-id="faqs">
+      <i class="fa fa-question"></i>
+    </a>
+    <a href="#contact" data-section="contact" data-nav-id="contact">
+      <i class="fa fa-envelope"></i>
+    </a>
   </menu>
  
 </div>

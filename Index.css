@@ -437,11 +437,9 @@ h6{
     display: flex;
     align-items: center;
     border-radius: 28px;
+    border: 1px solid var(--color-gray-3);
     overflow: hidden;
-    box-shadow:
-      0 0 0 1px rgba(240, 90, 37, 0.25),
-      0 20px 60px rgba(0, 0, 0, 0.7),
-      0 0 80px rgba(240, 90, 37, 0.08);
+    box-shadow: var(--color-dark) 0px 6px 0 0;
   }
  
   /* ── Animated meteor canvas — fills the nav wrapper ── */
@@ -491,8 +489,8 @@ h6{
   }
  
   menu.floating-nav a:hover {
-    color: #fff;
-    background: rgba(240, 90, 37, 0.18);
+    color: var(--color-primary-variant);
+    background: var(--color-gray-1);
     border-color: rgba(240, 90, 37, 0.35);
     transform: translateY(-2px);
   }
@@ -501,9 +499,8 @@ h6{
     color: #fff;
     background: rgba(240, 90, 37, 0.28);
     border-color: rgba(240, 90, 37, 0.6);
-    box-shadow:
-      0 0 18px rgba(240, 90, 37, 0.35),
-      inset 0 0 8px rgba(240, 90, 37, 0.1);
+    box-shadow: #F05A25 -1px 1px 0 ;
+    
   }
  
   /* Active indicator dot */
