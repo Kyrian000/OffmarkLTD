@@ -93,6 +93,23 @@ h6{
 }
 
 
+
+
+/* Curtain loader */
+/* ── CURTAIN ── */
+    #curtain {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      z-index: 9999;
+      pointer-events: none;
+      transform: translateY(0%);
+      transition: transform 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+    #curtain.up   { transform: translateY(-100%); }
+    #curtain.down { transform: translateY(0%);    }
+
+
  /* ── Custom cursor wrapper ── */
   #cursor {
     position: fixed;
@@ -152,7 +169,7 @@ h6{
 
 /* CSS loader */
 
-.loader-wrapper {
+/* .loader-wrapper {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -172,8 +189,8 @@ h6{
 }
 
 .loader-wrapper.swipe-away {
-  transform: translateX(-100%);  /* or translateY(-100%) for up */
-}
+  transform: translateX(-100%); }  /* or translateY(-100%) for up */
+
 
   
 /* ─── DESKTOP NAV ─── */

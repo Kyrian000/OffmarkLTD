@@ -34,12 +34,9 @@
 
     </head>
 <body>
-<!-- loader -->
- <div class="loader-wrapper">
-    <img src="Images/White/logo.png" alt="Offmark">
- </div>
 
-  
+ <div id="curtain"></div>
+
   <!-- ── CURSOR SVG ── -->
 <div id="cursor">
   <svg width="52" height="80" viewBox="0 0 52 80" xmlns="http://www.w3.org/2000/svg">
@@ -69,15 +66,15 @@
  <!-- DESKTOP NAV -->
   <nav class="desktop-nav">
     <div class="nav-side">
-      <a href="index.html" class=" nav-pill button-74" role="button">FAQs</a>
-      <a href="team.html" class=" nav-pill button-74 " role="button">About</a>
+      <a href="index.html" k="navigateTo('/index.html'); return false;" class=" nav-pill button-74" role="button" >FAQs</a>
+      <a href="#" onclick="navigateTo('team.html')" class=" nav-pill button-74 " role="button" >About</a>
     </div>
  
     <a href="#" class="nav-logo"><img src="Images/White/Logo2.png" alt=""></a>
  
     <div class="nav-side">
-      <a href="#" class=" nav-pill button-74 one" role="button">Contact</a>
-      <a href="#" class=" nav-pill button-74 two" role="button">Catalog</a>
+      <a href="#" class=" nav-pill button-74 one" role="button" >Contact</a>
+      <a href="#" class=" nav-pill button-74 two" role="button" >Catalog</a>
     </div>
   </nav>
 
@@ -92,20 +89,20 @@
  
   <!-- Menu Bar -->
   <menu class="floating-nav">
-    <a href="#" data-section="hero" data-nav-id="home">
+    <a href="#" data-section="hero" data-nav-id="home" data-transition>
       <i class="fa fa-home"></i>
       <span class="active-dot"></span>
     </a>
-    <a href="team.html" data-section="team" data-nav-id="team">
+    <a href="team.html" data-section="team" data-nav-id="team" data-transition>
       <i class="fa fa-users"></i>
     </a>
-    <a href="#projects" data-section="projects" data-nav-id="projects">
+    <a href="#projects" data-section="projects" data-nav-id="projects" data-transition>
       <i class="fa fa-shirt"></i>
     </a>
-    <a href="#faqs" data-section="faqs" data-nav-id="faqs">
+    <a href="#faqs" data-section="faqs" data-nav-id="faqs" data-transition>
       <i class="fa fa-question"></i>
     </a>
-    <a href="#contact" data-section="contact" data-nav-id="contact">
+    <a href="#contact" data-section="contact" data-nav-id="contact" data-transition>
       <i class="fa fa-envelope"></i>
     </a>
   </menu>
@@ -168,11 +165,11 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      $(window).on("load", function(){
-      setTimeout(() => {
-        $(".loader-wrapper").addClass("swipe-away");
-      }, 1700); 
-    });
+    //   $(window).on("load", function(){
+    //   setTimeout(() => {
+    //     $(".loader-wrapper").addClass("swipe-away");
+    //   }, 1700); 
+    // });
     </script>
 
 

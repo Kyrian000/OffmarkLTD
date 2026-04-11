@@ -5,11 +5,26 @@ nav.desktop-nav {
 }
 
 
+/* ── CURTAIN ── */
+    #curtain {
+      position: fixed;
+      inset: 0;
+      background: var(--color-light);
+      z-index: 9999;
+      pointer-events: none;
+      transform: translateY(0%);
+      transition: transform 0.4s cubic-bezier(0.5, 0, 0.175, 1);
+    }
+    #curtain.up   { transform: translateY(-100%); }
+    #curtain.down { transform: translateY(0%);    }
+
+
+
 
 /* spacer */
 .sob{
     margin-top: 10rem;
-    margin: 0 8rem;
+    margin: 0 10rem;
     border-radius: 2rem 2rem;
     height: fit-content;
     background: var(--color-gray-1);
@@ -55,6 +70,87 @@ nav.desktop-nav {
             color: var(--color-primary);
         }
     }
+    .profile_wrapper{
+        h1{
+            text-shadow: none;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .main_wrapper{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;            
+            transform: translateY(-2rem);
+            .wrapper{
+                /* width: 13rem; */
+                background: var(--color-dark);
+                padding: 1rem;
+                border-radius: 1rem;
+                margin-bottom: 3rem;
+
+                img{
+                    height: auto;
+                    border-radius: 1rem;
+                }
+                .category{
+                    font-size: 0.6rem;
+                    padding: 0.3rem;
+                    background: var(--color-light);
+                    width: fit-content;
+                    border-radius: 1rem;
+                    margin-top: 0.5rem;
+                    margin-bottom: 0.5rem;
+                    color: black;
+                }
+                h3{
+                    font-size: 17px;
+                    border-bottom: none;
+                    padding: 0;
+                }
+                h5{
+                    color: var(--color-light);
+                    line-height: 1.4;
+                    font-weight: 100;
+                }
+                h4{
+                    font-size: 13px;
+                    color: var(--color-light);
+                    font-weight: 100;
+                }
+                .socials{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 6px;
+                    a{
+                        font-size: 13px;
+                        width: fit-content;
+                        padding: 4px 7px;
+                        background: gray;
+                        margin-top: 7px;
+                        border-radius: 1rem;
+                        color: var(--color-light);
+                        border: 1px solid transparent;
+                        &:hover{
+                            background: transparent;
+                            border: 1px solid var(--color-light);
+                        }
+                        i{
+                            margin-right: 5px;
+                        }
+                        .fa-linkedin{
+                            color: blue;
+                        }
+                        .fa-instagram {
+                            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                        }
+                    }
+                }
+            }
+        }
+    }
     .prompt{
         width: 100%;
         display: flex;
@@ -78,7 +174,15 @@ nav.desktop-nav {
     }
 }
 
-
+@media screen and (max-width: 1064px) {
+    .sob{
+        .profile_wrapper{
+            .main_wrapper{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 950px) {
     .sob{
@@ -88,6 +192,10 @@ nav.desktop-nav {
         h1{
             font-size: 3rem;
         }
+        .profile_wrapper{
+            .main_wrapper{
+            }
+        }
     }
 }
 
@@ -95,6 +203,12 @@ nav.desktop-nav {
     .sob{
         h1{
             font-size: 2.5rem;
+        }
+        .profile_wrapper{
+            .main_wrapper{
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
         }
     }
 }

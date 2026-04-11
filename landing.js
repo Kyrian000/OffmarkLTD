@@ -399,3 +399,26 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+
+
+
+
+// curtain 
+ /* Swipe UP on load — reveal the page */
+    window.addEventListener('DOMContentLoaded', () => {
+      requestAnimationFrame(() => {
+        document.getElementById('curtain').classList.add('up');
+      });
+    });
+ 
+    /* Call this for every link/button instead of href */
+    function navigateTo(url) {
+      const curtain = document.getElementById('curtain');
+      curtain.classList.remove('up');
+      curtain.classList.add('down');          // swipe DOWN to cover page
+ 
+      setTimeout(() => {
+        window.location.href = url;           // go to new page (swipe UP fires on load there)
+      }, 800);                                // wait for animation to finish
+    }
