@@ -67,7 +67,7 @@ h6{
 
 /* animations */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(40px); }
+  from { opacity: 0; transform: translateY(5rem); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
@@ -98,16 +98,18 @@ h6{
 /* Curtain loader */
 /* ── CURTAIN ── */
     #curtain {
+      border-bottom-left-radius: 3rem;
+      border-bottom-right-radius: 3rem;
       position: fixed;
       inset: 0;
-      background: #ffffff;
+      background: rgb(179, 167, 167);
       z-index: 9999;
       pointer-events: none;
       transform: translateY(0%);
-      transition: transform 0.75s cubic-bezier(0.77, 0, 0.175, 1);
+      transition: transform 0.3s cubic-bezier(0.77, 0, 0.175, 1);
     }
     #curtain.up   { transform: translateY(-100%); }
-    #curtain.down { transform: translateY(0%);    }
+    #curtain.down { transform: translateY(0%); }
 
 
  /* ── Custom cursor wrapper ── */
@@ -203,6 +205,8 @@ h6{
       justify-content: space-between;
       position: relative;
       height: 4.5rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
     }
  
     .nav-side {
@@ -245,7 +249,7 @@ h6{
   cursor: pointer;
   display: inline-block;
   font-weight: 800;
-  padding: 0 18px;
+  padding: 0.2rem 2rem;
   line-height: 2.2rem;
   text-align: center;
   text-decoration: none;
@@ -302,6 +306,7 @@ h6{
             font-family: "Dancing Script", cursive;
             font-optical-sizing: auto;
             transform: rotate(-8deg);
+            animation: fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
           }
           h1{
             font-size: 3.5rem;
@@ -314,8 +319,8 @@ h6{
           }
           a{
             margin-top: 1.5rem;
+            animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
           }
-      
 }
 
 
@@ -449,7 +454,7 @@ h6{
     left: 50%;
     bottom: -8rem;
     transform: translateX(-50%) scale(0);    
-    animation: animateFloatingNav 1s 2s ease forwards;
+    animation: animateFloatingNav 0.7s 0.4s ease forwards;
     z-index: 10;
     display: flex;
     align-items: center;
@@ -545,6 +550,7 @@ nav.desktop-nav {
 .mobile-float-nav { 
   display: flex; 
 }
+
 
 
 .spacer{
