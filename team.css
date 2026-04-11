@@ -33,6 +33,7 @@ nav.desktop-nav {
     background: var(--color-gray-1);
     padding: 2rem;
     border: 1px solid var(--color-gray-3);
+    animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
     
     h3{
         font-size:  2rem;
@@ -51,12 +52,14 @@ nav.desktop-nav {
       font-weight: 500;
       font-optical-sizing: auto;
       text-shadow: var(--color-dark) 2px 2px 0;
-        z-index: 100;
+      animation: fadeInUp 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+
     }
     .team{
         display: grid;
         grid-template-columns: 1fr;
         gap: 0;
+        
         img{
             width: 23rem;
             height: fit-content;
@@ -66,6 +69,9 @@ nav.desktop-nav {
             box-shadow: var(--color-primary) -8px 8px 0 0;
             display: block;
             margin: 0 auto;
+            /* opacity: 0; 
+            transform: scale(0.88); 
+            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34,1.56,0.64,1); */
         }
         h4{
             transform: translateY(-3rem);

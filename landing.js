@@ -393,13 +393,25 @@ window.addEventListener('scroll', () =>{
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('animate');
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // fires once only
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.15 }); // triggers when 15% is visible
 
-document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-up, .slide-left, .scale-pop, .clip-reveal')
+  .forEach(el => observer.observe(el));
 
+// Stagger: observe the parent, animate children with delay
+document.querySelectorAll('.stagger-parent').forEach(el => {
+  new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) {
+      el.querySelectorAll('.stagger-item').forEach((child, i) => {
+        setTimeout(() => child.classList.add('visible'), i * 110);
+      });
+    }
+  }, { threshold: 0.15 }).observe(el);
+});
 
 
 
